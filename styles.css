@@ -152,6 +152,14 @@ h1, h2, h3 {
     border: 0;
 }
 
+.hero-youtube-poster {
+    display: none;
+}
+
+.hero-banner-video {
+    display: none;
+}
+
 @media (min-width: 769px) {
     .hero-youtube-iframe {
         top: 50%;
@@ -1095,14 +1103,35 @@ footer {
         overflow: hidden;
     }
 
-    .hero .video-banner .hero-youtube-iframe,
-    .video-banner-section .hero-youtube-iframe {
+    .hero .video-banner .hero-youtube-iframe {
+        display: none;
+    }
+
+    .hero .video-banner .hero-banner-video {
+        display: block;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        transform: none;
+        object-fit: cover;
+        object-position: center center;
+        pointer-events: none;
+    }
+
+    .video-banner-section .hero-youtube-iframe {
+        display: none;
+    }
+
+    .video-banner-section .hero-youtube-poster {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
     }
 
     /* Photo banner: 4:3 on mobile to show more of the image */
