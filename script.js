@@ -188,11 +188,19 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        img.style.opacity = '0';
-        img.addEventListener('load', () => {
+        const showImage = () => {
             img.style.transition = 'opacity 0.5s ease';
             img.style.opacity = '1';
-        });
+        };
+
+        img.style.opacity = '0';
+
+        if (img.complete) {
+            showImage();
+        } else {
+            img.addEventListener('load', showImage);
+            img.addEventListener('error', showImage);
+        }
     });
 });
 
@@ -205,6 +213,8 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-in');
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
             observer.unobserve(entry.target);
         }
     });
@@ -216,12 +226,6 @@ document.querySelectorAll('section').forEach(section => {
     section.style.transform = 'translateY(20px)';
     section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(section);
-});
-
-// Add fade-in class
-document.querySelectorAll('.fade-in').forEach(element => {
-    element.style.opacity = '1';
-    element.style.transform = 'translateY(0)';
 });
 
 // Mobile menu
