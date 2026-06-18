@@ -1,0 +1,34 @@
+.DS_Store
+.vscode/
+
+# Old copies and unrelated folders
+website/
+clean_website/
+test/
+WEB GAMES/
+ARABELLA W:FILM GRAIN/
+venue-photos/
+
+# Large video files
+*.MOV
+*.mov
+*.m4v
+
+# Original photos (only compressed versions are deployed)
+PHOTOS FOR WEB/*
+!PHOTOS FOR WEB/WEB COMPRESSED VERSIONS/
+!PHOTOS FOR WEB/WEB COMPRESSED VERSIONS/**
+
+# Loose originals at project root
+[12]-*.jpg
+2-*.jpg
+486.jpg
+487.jpg
+488.jpg
+489.jpg
+PIC OF DAN.jpg
+iveta and liam 1.jpg
+laying down.JPG
+woods.JPG
+wide bride groom.png
+STYLED SHOOT*.png

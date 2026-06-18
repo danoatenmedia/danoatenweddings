@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan Oaten Weddings - Photography & Videography</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DAN OATEN WEDDINGS</div>
+        <div class="nav-content">
+            <button class="mobile-menu-button">☰</button>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="videography.html">VIDEOGRAPHY</a>
+                <a href="photography.html">PHOTOGRAPHY</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="video-banner">
+            <div class="hero-youtube" aria-hidden="true">
+                <iframe
+                    class="hero-youtube-iframe"
+                    src="https://www.youtube-nocookie.com/embed/7D-t5KvVeIo?autoplay=1&mute=1&loop=1&playlist=7D-t5KvVeIo&controls=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&fs=0"
+                    title="Dan Oaten Weddings 2023 reel"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text-container">
+                <h1 class="hero-title">UK & DESTINATION VIDEOGRAPHER AND PHOTOGRAPHER</h1>
+                <p class="hero-description">Based in Suffolk, Dan Oaten Weddings provides videography and photography for UK and destination weddings, from intimate ceremonies to grand events. My approach to filming your day is very relaxed and simple, I like to let the day unfold and capture those candid moments, and create something that is cinematic and unique to my couples.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="video-banner-section">
+        <div class="banner-text-container">
+            <h2 class="banner-title">VIDEOGRAPHY</h2>
+            <p class="banner-description">Capturing your special moments in motion, creating timeless memories that tell your unique story.</p>
+        </div>
+        <div class="banner-video-container">
+            <div class="hero-youtube" aria-hidden="true">
+                <iframe
+                    class="hero-youtube-iframe"
+                    src="https://www.youtube-nocookie.com/embed/HKAzUGBeCcc?autoplay=1&mute=1&loop=1&playlist=HKAzUGBeCcc&controls=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&fs=0"
+                    title="Brides 2022"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="photo-banner-section">
+        <div class="banner-text-container">
+            <h2 class="banner-title">PHOTOGRAPHY</h2>
+            <p class="banner-description">Capturing timeless moments through the lens, preserving your special memories in stunning detail.</p>
+        </div>
+        <div class="banner-image-container">
+            <img src="PHOTOS FOR WEB/WEB COMPRESSED VERSIONS/woods.jpg" alt="Photography" class="banner-image">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Dan Oaten Weddings. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Basic navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const navLinks = document.querySelector('.nav-links');
+        const navbar = document.querySelector('.navbar');
+
+        function setMobileMenuOpen(isOpen) {
+            if (!navLinks || !navbar) return;
+            navLinks.classList.toggle('active', isOpen);
+            navbar.classList.toggle('menu-open', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+            if (mobileMenuButton) {
+                mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                mobileMenuButton.textContent = isOpen ? '✕' : '☰';
+            }
+        }
+
+        if (mobileMenuButton && navLinks) {
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            mobileMenuButton.setAttribute('aria-label', 'Toggle navigation menu');
+
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                setMobileMenuOpen(!navLinks.classList.contains('active'));
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    setMobileMenuOpen(false);
+                });
+            });
+        }
+
+        // Email submission
+        function sendEmail(event) {
+            event.preventDefault();
+            const email = document.getElementById('subscriberEmail').value;
+            const subject = 'New Website Subscriber';
+            const body = `A new subscriber has signed up with the email: ${email}`;
+            const mailtoLink = `mailto:danoatenmedia@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+            document.getElementById('subscriberEmail').value = '';
+        }
+    </script>
+</body>
+</html> 

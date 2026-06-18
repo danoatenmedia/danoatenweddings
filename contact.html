@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dan Oaten Weddings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DAN OATEN WEDDINGS</div>
+        <div class="nav-content">
+            <button class="mobile-menu-button">☰</button>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="videography.html">VIDEOGRAPHY</a>
+                <a href="photography.html">PHOTOGRAPHY</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="contact-page">
+        <div class="contact-hero">
+            <h1>Let's Create Something Beautiful Together</h1>
+            <p>I'd love to hear about your wedding plans and discuss how I can help capture your special day.</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info-section">
+                <div class="contact-card">
+            <h2>Get in Touch</h2>
+                    <div class="contact-details">
+                <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                    <h3>Email</h3>
+                                <p><a href="mailto:danoatenmedia@gmail.com">danoatenmedia@gmail.com</a></p>
+                            </div>
+                </div>
+                <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Suffolk, United Kingdom</p>
+                                <p>Available for UK & Destination Weddings</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://instagram.com/danoatenweddings" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCGWJz1EuunqIZIr-zbtcZ6g" target="_blank" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-section">
+            <form id="contactForm" class="contact-form">
+                    <div class="form-header">
+                        <h2>Send a Message</h2>
+                        <p>Fill out the form below and I'll get back to you within 24 hours.</p>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="weddingDate">Wedding Date</label>
+                            <input type="date" id="weddingDate" name="weddingDate">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="venue">Wedding Venue</label>
+                            <input type="text" id="venue" name="venue">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required rows="5"></textarea>
+                        </div>
+                        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="submit" class="submit-button">
+                            <span class="submit-button-text">Send Message</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How far in advance should I book?</h3>
+                    <p>I recommend booking 12-18 months in advance, especially for peak season dates (May-September).</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you travel for weddings?</h3>
+                    <p>Yes! I'm available for both UK and destination weddings. Travel costs may apply for locations outside of Suffolk.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long until I receive my photos or videos?</h3>
+                    <p>Wedding photos and videos are typically delivered within 8-12 weeks of your wedding date.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://instagram.com/danoatenweddings" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/channel/UCGWJz1EuunqIZIr-zbtcZ6g" target="_blank">YouTube</a>
+            </div>
+            <p>&copy; 2024 Dan Oaten Weddings. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

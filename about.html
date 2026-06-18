@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Dan Oaten Weddings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">DAN OATEN WEDDINGS</div>
+        <div class="nav-content">
+            <button class="mobile-menu-button">☰</button>
+            <div class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="videography.html">VIDEOGRAPHY</a>
+                <a href="photography.html">PHOTOGRAPHY</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="about-hero">
+        <img src="PHOTOS FOR WEB/WEB COMPRESSED VERSIONS/iveta and liam 1.jpg" alt="Wedding couple with Land Rover" class="hero-image">
+    </header>
+
+    <main class="about-main">
+        <div class="about-spread-layout">
+            <section class="about-section about-spread-text">
+                <div class="about-text-container">
+                    <h1>About Me</h1>
+                    <h2>Videographer | Photographer | Storyteller</h2>
+                    <p>Hi, I'm Dan, a passionate videographer and photographer with a keen eye for storytelling. While I specialize in capturing the magic of weddings—those once-in-a-lifetime moments filled with love, emotion, and celebration—my work goes far beyond the aisle.</p>
+                    <p>From high-energy sports and dynamic events to creative projects, I bring the same level of dedication to everything I'm privileged to work on. I also work as a live TV cameraman, where precision, timing, and adaptability keep me on my toes.</p>
+                    <p>Whether it's a quiet glance between newlyweds or the roar of a live crowd, I love being part of the creative process—and bringing those visions to life.</p>
+                </div>
+            </section>
+            <div class="about-spread-photo">
+                <img src="PHOTOS FOR WEB/WEB COMPRESSED VERSIONS/PIC OF DAN.jpg" alt="Dan Oaten" class="about-image about-portrait">
+            </div>
+            <section class="recommended-suppliers about-spread-suppliers">
+            <h2 class="recommended-title">Recommended Supplier At</h2>
+            <p class="recommended-subtitle">Venues I love working with across Suffolk and beyond.</p>
+            <div class="recommended-grid">
+                <div class="venue-card">
+                    <a href="https://www.eastongrange.co.uk/" target="_blank" rel="noopener" class="venue-website-link">
+                        <div class="venue-card-image">
+                            <img src="easton grange logo.jpg" alt="Easton Grange" class="venue-logo">
+                        </div>
+                        <span class="venue-name">Easton Grange</span>
+                    </a>
+                    <a href="https://www.instagram.com/eastongrange/" target="_blank" rel="noopener" class="venue-instagram-link" aria-label="Easton Grange on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="venue-card">
+                    <a href="https://www.bruisyardcountryestate.co.uk/" target="_blank" rel="noopener" class="venue-website-link">
+                        <div class="venue-card-image">
+                            <img src="bruisyard-logo.jpg" alt="Bruisyard Country Estate" class="venue-logo">
+                        </div>
+                        <span class="venue-name">Bruisyard Country Estate</span>
+                    </a>
+                    <a href="https://www.instagram.com/bruisyardcountryestate/" target="_blank" rel="noopener" class="venue-instagram-link" aria-label="Bruisyard Country Estate on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="venue-card">
+                    <a href="https://henhampark.com/" target="_blank" rel="noopener" class="venue-website-link">
+                        <div class="venue-card-image">
+                            <img src="Henham-Park_whitelogo.png" alt="Henham Barns" class="venue-logo">
+                        </div>
+                        <span class="venue-name">Henham Barns</span>
+                    </a>
+                    <a href="https://www.instagram.com/henhamweddings/" target="_blank" rel="noopener" class="venue-instagram-link" aria-label="Henham Barns on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="venue-card">
+                    <a href="https://www.fieldskitchen.co.uk/the-barn-by-fields/" target="_blank" rel="noopener" class="venue-website-link">
+                        <div class="venue-card-image">
+                            <img src="barn by fields logo.jpg" alt="The Barn by Fields" class="venue-logo">
+                        </div>
+                        <span class="venue-name">The Barn by Fields</span>
+                    </a>
+                    <a href="https://www.instagram.com/thebarnbyfields/?hl=en" target="_blank" rel="noopener" class="venue-instagram-link" aria-label="The Barn by Fields on Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Dan Oaten Weddings. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Basic navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const navLinks = document.querySelector('.nav-links');
+        const navbar = document.querySelector('.navbar');
+
+        function setMobileMenuOpen(isOpen) {
+            if (!navLinks || !navbar) return;
+            navLinks.classList.toggle('active', isOpen);
+            navbar.classList.toggle('menu-open', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+            if (mobileMenuButton) {
+                mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                mobileMenuButton.textContent = isOpen ? '✕' : '☰';
+            }
+        }
+
+        if (mobileMenuButton && navLinks) {
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            mobileMenuButton.setAttribute('aria-label', 'Toggle navigation menu');
+
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                setMobileMenuOpen(!navLinks.classList.contains('active'));
+            });
+
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    setMobileMenuOpen(false);
+                });
+            });
+        }
+
+        // Email submission
+        function sendEmail(event) {
+            event.preventDefault();
+            const email = document.getElementById('subscriberEmail').value;
+            const subject = 'New Website Subscriber';
+            const body = `A new subscriber has signed up with the email: ${email}`;
+            const mailtoLink = `mailto:danoatenmedia@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.location.href = mailtoLink;
+            document.getElementById('subscriberEmail').value = '';
+        }
+    </script>
+</body>
+</html> 
