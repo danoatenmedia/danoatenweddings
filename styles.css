@@ -145,14 +145,23 @@ h1, h2, h3 {
 
 .hero-youtube-iframe {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 56.25vw;
-    min-height: 100%;
-    min-width: 177.78vh;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border: 0;
+}
+
+@media (min-width: 769px) {
+    .hero-youtube-iframe {
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 56.25vw;
+        min-height: 100%;
+        min-width: 177.78vh;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .hero-video {
@@ -1058,17 +1067,55 @@ footer {
         font-size: 1.35rem;
         letter-spacing: 0.08em;
         line-height: 1.45;
+        text-wrap: balance;
     }
 
     .hero-description {
         font-size: 0.9rem;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.06em;
         line-height: 1.7;
+        text-transform: none;
     }
 
-    .video-banner,
-    .banner-video-container,
-    .banner-image-container,
+    /* YouTube banners: 16:9 padding hack on iframe wrapper (reliable on iOS Safari) */
+    .hero .video-banner,
+    .video-banner-section .banner-video-container {
+        padding-top: 0;
+        height: auto;
+    }
+
+    .hero .video-banner .hero-youtube,
+    .video-banner-section .banner-video-container .hero-youtube {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%;
+        overflow: hidden;
+    }
+
+    .hero .video-banner .hero-youtube-iframe,
+    .video-banner-section .hero-youtube-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: none;
+    }
+
+    /* Photo banner: 4:3 on mobile to show more of the image */
+    .photo-banner-section .banner-image-container {
+        height: 0;
+        padding-top: 75%;
+    }
+
+    .banner-image {
+        object-fit: cover;
+        object-position: center center;
+    }
+
     .commercial-banner-section .banner-video-container {
         padding-top: 56.25%;
     }
@@ -1164,11 +1211,6 @@ footer {
     .photography-header-text {
         margin: 1.5rem 1rem 2rem;
         padding: 0;
-    }
-
-    .photography-header-text h1 {
-        font-size: 1.5rem;
-        letter-spacing: 0.12em;
     }
 
     .photography-header-text h2 {
@@ -1281,7 +1323,14 @@ footer {
     }
 
     .hero-title {
-        font-size: 1.15rem;
+        font-size: 1.05rem;
+        letter-spacing: 0.06em;
+        line-height: 1.5;
+    }
+
+    .hero-description {
+        font-size: 0.85rem;
+        letter-spacing: 0.04em;
     }
 
     .banner-title,
@@ -1295,7 +1344,7 @@ footer {
     .photo-banner-section .banner-description,
     .commercial-banner-section .banner-description {
         font-size: 0.85rem;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.04em;
     }
 
     .service-banner {
@@ -1621,16 +1670,20 @@ footer {
 
 @media (max-width: 768px) {
     .banner-text-container {
-        padding: 2rem 1rem;
+        padding: 1.75rem 1rem;
     }
 
     .banner-title {
-        font-size: 2rem;
+        font-size: 1.65rem;
+        letter-spacing: 0.1em;
+        text-wrap: balance;
     }
 
     .banner-description {
-    font-size: 1rem;
-        letter-spacing: 0.15em;
+        font-size: 0.9rem;
+        letter-spacing: 0.06em;
+        line-height: 1.65;
+        text-transform: none;
     }
 }
 
@@ -1706,16 +1759,20 @@ footer {
 
 @media (max-width: 768px) {
     .photo-banner-section .banner-text-container {
-        padding: 2rem 1rem;
+        padding: 1.75rem 1rem;
     }
 
     .photo-banner-section .banner-title {
-        font-size: 2rem;
+        font-size: 1.65rem;
+        letter-spacing: 0.1em;
+        text-wrap: balance;
     }
 
     .photo-banner-section .banner-description {
-        font-size: 1rem;
-        letter-spacing: 0.15em;
+        font-size: 0.9rem;
+        letter-spacing: 0.06em;
+        line-height: 1.65;
+        text-transform: none;
     }
 }
 
@@ -2835,4 +2892,15 @@ footer {
     height: 100%;
     border: 0;
     border-radius: 16px;
+}
+
+/* Photography page title — must stay on one line on mobile */
+@media (max-width: 768px) {
+    .photography-header-text .photography-page-title {
+        font-size: clamp(0.62rem, 2.85vw, 0.82rem);
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+        word-break: keep-all;
+        overflow-wrap: normal;
+    }
 } 
