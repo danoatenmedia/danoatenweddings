@@ -14,21 +14,23 @@ venue-photos/
 *.mov
 *.m4v
 
-# Original photos (only compressed versions are deployed)
+# Original photos in PHOTOS FOR WEB (only compressed versions are deployed)
 PHOTOS FOR WEB/*
 !PHOTOS FOR WEB/WEB COMPRESSED VERSIONS/
 !PHOTOS FOR WEB/WEB COMPRESSED VERSIONS/**
 
-# Loose originals at project root
-[12]-*.jpg
-2-*.jpg
-486.jpg
-487.jpg
-488.jpg
-489.jpg
-PIC OF DAN.jpg
-iveta and liam 1.jpg
-laying down.JPG
-woods.JPG
-wide bride groom.png
-STYLED SHOOT*.png
+# Loose originals at project root only (leading / = root only)
+/[12]-*.jpg
+/2-*.jpg
+/486.jpg
+/487.jpg
+/488.jpg
+/489.jpg
+/PIC OF DAN.jpg
+/iveta and liam 1.jpg
+/laying down.JPG
+/laying down.jpg
+/woods.JPG
+/woods.jpg
+/wide bride groom.png
+/STYLED SHOOT*.png
