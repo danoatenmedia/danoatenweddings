@@ -194,8 +194,17 @@
 
         // Top hero: self-hosted video on mobile only
         (function initHeroMobileVideo() {
+            const isMobile = window.matchMedia('(max-width: 768px)').matches;
+            const heroIframe = document.querySelector('.hero .video-banner .hero-youtube-iframe');
+
+            if (isMobile && heroIframe) {
+                heroIframe.removeAttribute('src');
+            }
+
+            if (!isMobile) return;
+
             const heroVideo = document.querySelector('.hero-banner-video--mobile');
-            if (!heroVideo || !window.matchMedia('(max-width: 768px)').matches) return;
+            if (!heroVideo) return;
 
             const tryPlay = () => {
                 heroVideo.play().catch(() => {});
