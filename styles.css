@@ -2972,4 +2972,31 @@ footer {
         word-break: keep-all;
         overflow-wrap: normal;
     }
+
+    /* Story descriptions — must come after base .wedding-text rules in this file */
+    .wedding-stories .wedding-story {
+        padding: 1rem 0.65rem;
+        margin-bottom: 1rem;
+    }
+
+    .wedding-stories .wedding-text {
+        font-size: 0.8rem;
+        margin-top: 0.65rem;
+        padding-left: 0;
+        line-height: 1.5;
+    }
+
+    .wedding-stories .wedding-text h3 {
+        font-size: 0.95rem;
+        letter-spacing: 0.08em;
+        margin-bottom: 0.35rem;
+    }
+
+    .wedding-stories .wedding-text p {
+        font-size: 0.75rem;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        text-transform: none;
+        margin: 0;
+    }
 } 
