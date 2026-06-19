@@ -3158,6 +3158,14 @@ footer {
     gap: 2rem;
 }
 
+/* Large desktop: 4 across × 2 rows — same card styling, wider grid only */
+@media (min-width: 1400px) {
+    .reviews-grid {
+        max-width: min(2168px, calc(100vw - 4rem));
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 .review-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(196, 164, 132, 0.15);
