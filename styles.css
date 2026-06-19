@@ -2975,7 +2975,8 @@ footer {
 
     /* Story descriptions — must come after base .wedding-text rules in this file */
     .wedding-stories {
-        gap: 0.75rem;
+        --story-gap: 0.85rem;
+        gap: var(--story-gap);
         padding: 0 0.5rem;
     }
 
@@ -2985,9 +2986,9 @@ footer {
 
     .wedding-stories .wedding-story {
         background: transparent;
-        padding: 0.5rem 0.65rem 0.5rem;
+        padding: 0 0.65rem;
         margin-bottom: 0;
-        gap: 0.25rem;
+        gap: var(--story-gap);
         border-radius: 0;
         min-height: 0;
     }
