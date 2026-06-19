@@ -2621,6 +2621,13 @@ footer {
     .wedding-text h3 {
         font-size: 1.1rem;
     }
+
+    .wedding-text p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        letter-spacing: 0.04em;
+        text-transform: none;
+    }
 }
 
 .other-occasions-grid {
@@ -2668,6 +2675,11 @@ footer {
     }
     .wedding-images img {
         height: 180px;
+    }
+    .wedding-text p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        letter-spacing: 0.03em;
     }
     .other-occasions-images {
         grid-template-columns: repeat(2, 1fr);
