@@ -2621,6 +2621,7 @@ footer {
     .wedding-text h3 {
         font-size: 1.1rem;
     }
+
 }
 
 .other-occasions-grid {
@@ -2972,4 +2973,21 @@ footer {
         word-break: keep-all;
         overflow-wrap: normal;
     }
-} 
+}
+
+/* Final mobile override for photography collection descriptions. */
+@media (max-width: 768px) {
+    .wedding-stories .wedding-text p {
+        font-size: 0.68rem;
+        line-height: 1.35;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .wedding-stories .wedding-text p {
+        font-size: 0.62rem;
+        line-height: 1.3;
+    }
+}
