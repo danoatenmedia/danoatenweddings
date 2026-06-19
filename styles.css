@@ -3150,22 +3150,22 @@ footer {
 }
 
 .reviews-grid {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem 4rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
 .review-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(196, 164, 132, 0.15);
     border-radius: 8px;
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1rem;
 }
 
 .review-stars {
@@ -3176,8 +3176,8 @@ footer {
 
 .review-quote {
     margin: 0;
-    font-size: 1rem;
-    line-height: 1.75;
+    font-size: 0.9rem;
+    line-height: 1.65;
     color: #ccc;
     font-style: italic;
     flex: 1;
@@ -3235,6 +3235,24 @@ footer {
 .reviews-contact-link:hover {
     background: #C4A484;
     color: #000;
+}
+
+@media (max-width: 1200px) {
+    .reviews-grid {
+        max-width: 1100px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .review-card {
+        padding: 2rem;
+        gap: 1.25rem;
+    }
+
+    .review-quote {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
 }
 
 @media (max-width: 768px) {
