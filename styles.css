@@ -3051,4 +3051,233 @@ footer {
         text-transform: none;
         margin: 0;
     }
+}
+
+/* Reviews Page */
+.reviews-page {
+    padding-top: 80px;
+    background: var(--primary-color);
+    min-height: 100vh;
+}
+
+.reviews-hero {
+    text-align: center;
+    padding: 5rem 2rem 3rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
+}
+
+.reviews-hero h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.reviews-hero p {
+    font-size: 1.1rem;
+    color: #999;
+    max-width: 560px;
+    margin: 0 auto;
+    letter-spacing: 0.08em;
+    line-height: 1.7;
+}
+
+.reviews-summary {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 2rem 3rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.reviews-rating-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.reviews-score {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1;
+    color: #C4A484;
+}
+
+.reviews-stars {
+    display: flex;
+    gap: 0.35rem;
+    color: #C4A484;
+    font-size: 1.25rem;
+}
+
+.reviews-source {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.reviews-google-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    background: #C4A484;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.reviews-google-button:hover {
+    background: #b38f6f;
+    transform: translateY(-2px);
+}
+
+.reviews-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(196, 164, 132, 0.15);
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.review-stars {
+    color: #C4A484;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+}
+
+.review-quote {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #ccc;
+    font-style: italic;
+    flex: 1;
+}
+
+.review-quote::before {
+    content: "\201C";
+    color: #C4A484;
+    font-size: 1.5rem;
+    line-height: 0;
+    vertical-align: -0.3em;
+    margin-right: 0.15rem;
+}
+
+.review-author {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #C4A484;
+    font-style: normal;
+}
+
+.nav-links a[aria-current="page"] {
+    color: #C4A484;
+}
+
+.reviews-cta {
+    text-align: center;
+    padding: 2rem 2rem 5rem;
+}
+
+.reviews-cta p {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    color: #999;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+.reviews-contact-link {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    border: 1px solid #C4A484;
+    color: #C4A484;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.reviews-contact-link:hover {
+    background: #C4A484;
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    .reviews-hero {
+        padding: 3.5rem 1.25rem 2rem;
+    }
+
+    .reviews-hero h1 {
+        font-size: 1.75rem;
+        letter-spacing: 0.12em;
+    }
+
+    .reviews-hero p {
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+    }
+
+    .reviews-summary {
+        padding: 0 1.25rem 2rem;
+    }
+
+    .reviews-score {
+        font-size: 3rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1.25rem 3rem;
+        gap: 1.25rem;
+    }
+
+    .review-card {
+        padding: 1.5rem;
+    }
+
+    .review-quote {
+        font-size: 0.9rem;
+    }
+
+    .reviews-google-button {
+        width: 100%;
+        max-width: 320px;
+        padding: 0.9rem 1.25rem;
+        font-size: 0.75rem;
+    }
 } 
