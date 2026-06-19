@@ -2974,22 +2974,37 @@ footer {
     }
 
     /* Story descriptions — must come after base .wedding-text rules in this file */
+    .wedding-stories {
+        gap: 0.75rem;
+        padding: 0 0.5rem;
+    }
+
+    .wedding-stories .wedding-divider {
+        display: none;
+    }
+
     .wedding-stories .wedding-story {
-        padding: 1rem 0.65rem;
-        margin-bottom: 1rem;
+        background: transparent;
+        padding: 0.5rem 0.65rem 0.5rem;
+        margin-bottom: 0;
+        gap: 0.25rem;
+        border-radius: 0;
+        min-height: 0;
     }
 
     .wedding-stories .wedding-text {
         font-size: 0.8rem;
-        margin-top: 0.65rem;
+        margin-top: 0;
         padding-left: 0;
+        padding-top: 0;
         line-height: 1.5;
+        justify-content: flex-start;
     }
 
     .wedding-stories .wedding-text h3 {
         font-size: 0.95rem;
         letter-spacing: 0.08em;
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.25rem;
     }
 
     .wedding-stories .wedding-text p {
