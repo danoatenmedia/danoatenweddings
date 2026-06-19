@@ -2681,23 +2681,6 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
-    .wedding-text p {
-        font-size: 0.78rem;
-        line-height: 1.45;
-        letter-spacing: 0.01em;
-        text-transform: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .wedding-text p {
-        font-size: 0.72rem;
-        line-height: 1.4;
-        letter-spacing: 0.005em;
-    }
-}
-
 .recommended-suppliers {
     text-align: center;
     margin: 4rem auto 5rem;
@@ -2990,4 +2973,21 @@ footer {
         word-break: keep-all;
         overflow-wrap: normal;
     }
-} 
+}
+
+/* Final mobile override for photography collection descriptions. */
+@media (max-width: 768px) {
+    .wedding-stories .wedding-text p {
+        font-size: 0.68rem;
+        line-height: 1.35;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .wedding-stories .wedding-text p {
+        font-size: 0.62rem;
+        line-height: 1.3;
+    }
+}
