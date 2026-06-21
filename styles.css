@@ -3365,4 +3365,43 @@ footer {
         padding: 0.9rem 1.25rem;
         font-size: 0.75rem;
     }
+}
+
+/* Photography page — scroll reveal on scroll */
+@media (prefers-reduced-motion: no-preference) {
+    .photography-page .scroll-reveal {
+        opacity: 0;
+        transform: translateY(36px);
+        transition: opacity 0.85s ease, transform 0.85s ease;
+    }
+
+    .photography-page .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .photography-page .scroll-reveal-stagger img {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .photography-page .scroll-reveal-stagger.is-visible img {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(1) { transition-delay: 0.05s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(2) { transition-delay: 0.1s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(3) { transition-delay: 0.15s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(4) { transition-delay: 0.2s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(5) { transition-delay: 0.25s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(6) { transition-delay: 0.3s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(7) { transition-delay: 0.35s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(8) { transition-delay: 0.4s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(9) { transition-delay: 0.45s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(10) { transition-delay: 0.5s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(11) { transition-delay: 0.55s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(12) { transition-delay: 0.6s; }
+    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(n+13) { transition-delay: 0.65s; }
 } 
