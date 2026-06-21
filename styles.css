@@ -3362,41 +3362,353 @@ footer {
     }
 }
 
-/* Photography page — scroll reveal on scroll */
+a.logo {
+    text-decoration: none;
+    color: #C4A484;
+    transition: color 0.3s ease;
+}
+
+a.logo:hover {
+    color: #e0c9a8;
+}
+
+.hero-cta-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.hero-cta-button {
+    display: inline-block;
+    padding: 1rem 2.25rem;
+    background: #C4A484;
+    color: #000;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-cta-button:hover {
+    transform: translateY(-3px);
+    background: #d4b894;
+    box-shadow: 0 8px 24px rgba(196, 164, 132, 0.35);
+}
+
+/* Reviews teaser — homepage */
+.reviews-teaser {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.95));
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.reviews-teaser-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.reviews-teaser-stars {
+    color: #C4A484;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+}
+
+.reviews-teaser-score {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+}
+
+.reviews-teaser-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    color: #999;
+    margin: 0;
+    letter-spacing: 0.08em;
+}
+
+.reviews-teaser-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #C4A484;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196, 164, 132, 0.4);
+    padding-bottom: 0.15rem;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.reviews-teaser-link:hover {
+    color: #e0c9a8;
+    border-color: #e0c9a8;
+}
+
+/* Clickable homepage banner sections */
+.banner-link-section {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.banner-link-section:hover {
+    opacity: 0.97;
+}
+
+.banner-link-section .banner-section-cta {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #C4A484;
+    border-bottom: 1px solid rgba(196, 164, 132, 0.4);
+    padding-bottom: 0.15rem;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.banner-link-section:hover .banner-section-cta {
+    color: #e0c9a8;
+    border-color: #e0c9a8;
+}
+
+.banner-link-section .banner-image,
+.banner-link-section .banner-video-container {
+    transition: transform 0.5s ease;
+}
+
+.banner-link-section:hover .banner-image {
+    transform: scale(1.03);
+}
+
+.banner-link-section:hover .banner-video-container .hero-youtube-iframe,
+.banner-link-section:hover .banner-video-container .hero-youtube-poster {
+    transform: scale(1.03);
+}
+
+/* Site footer */
+.site-footer {
+    background: #000;
+    border-top: 1px solid rgba(196, 164, 132, 0.15);
+    padding: 2.5rem 2rem;
+}
+
+.site-footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem 2rem;
+}
+
+.footer-nav a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #C4A484;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #C4A484;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #e0c9a8;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Sticky enquire — mobile only */
+.sticky-enquire {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    body:not(:has(.contact-page)) {
+        padding-bottom: 5rem;
+    }
+
+    .sticky-enquire {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        bottom: 1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        padding: 0.85rem 2rem;
+        background: #C4A484;
+        color: #000;
+        text-decoration: none;
+        border-radius: 50px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .sticky-enquire:hover {
+        background: #d4b894;
+        transform: translateX(-50%) translateY(-2px);
+    }
+
+    body:has(.contact-page) .sticky-enquire {
+        display: none;
+    }
+}
+
+/* Videography — featured film */
+.video-featured {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem 3rem;
+}
+
+.video-featured-label {
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #C4A484;
+    margin: 0 0 1.25rem;
+}
+
+.video-featured .video-container {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+.video-featured .video-description {
+    text-align: center;
+    margin-top: 1.25rem;
+}
+
+.video-gallery-heading {
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #666;
+    margin: 0 0 2rem;
+    padding: 0 2rem;
+}
+
+/* Photography — gallery hover + lightbox cursor */
+.wedding-images img,
+.other-occasions-images img {
+    cursor: zoom-in;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.wedding-images img:hover,
+.other-occasions-images img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    position: relative;
+}
+
+/* Scroll reveal — site-wide */
 @media (prefers-reduced-motion: no-preference) {
-    .photography-page .scroll-reveal {
+    .scroll-reveal {
         opacity: 0;
         transform: translateY(36px);
         transition: opacity 0.85s ease, transform 0.85s ease;
     }
 
-    .photography-page .scroll-reveal.is-visible {
+    .scroll-reveal.is-visible {
         opacity: 1;
         transform: translateY(0);
     }
 
-    .photography-page .scroll-reveal-stagger img {
+    .scroll-reveal-stagger > * {
         opacity: 0;
         transform: translateY(24px) scale(0.98);
         transition: opacity 0.65s ease, transform 0.65s ease;
     }
 
-    .photography-page .scroll-reveal-stagger.is-visible img {
+    .scroll-reveal-stagger.is-visible > * {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
 
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(1) { transition-delay: 0.05s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(2) { transition-delay: 0.1s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(3) { transition-delay: 0.15s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(4) { transition-delay: 0.2s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(5) { transition-delay: 0.25s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(6) { transition-delay: 0.3s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(7) { transition-delay: 0.35s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(8) { transition-delay: 0.4s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(9) { transition-delay: 0.45s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(10) { transition-delay: 0.5s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(11) { transition-delay: 0.55s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(12) { transition-delay: 0.6s; }
-    .photography-page .scroll-reveal-stagger.is-visible img:nth-child(n+13) { transition-delay: 0.65s; }
-} 
+    .scroll-reveal-stagger.is-visible > *:nth-child(1) { transition-delay: 0.05s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(2) { transition-delay: 0.1s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(3) { transition-delay: 0.15s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 0.2s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(5) { transition-delay: 0.25s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(6) { transition-delay: 0.3s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(7) { transition-delay: 0.35s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(8) { transition-delay: 0.4s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(9) { transition-delay: 0.45s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(10) { transition-delay: 0.5s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(11) { transition-delay: 0.55s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(12) { transition-delay: 0.6s; }
+    .scroll-reveal-stagger.is-visible > *:nth-child(n+13) { transition-delay: 0.65s; }
+}
+
+@media (max-width: 768px) {
+    .hero-cta-button {
+        font-size: 0.75rem;
+        padding: 0.9rem 1.75rem;
+    }
+
+    .footer-nav {
+        gap: 0.85rem 1.25rem;
+    }
+}
+ 

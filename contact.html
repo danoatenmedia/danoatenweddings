@@ -16,7 +16,7 @@
     <meta name="twitter:title" content="Contact - Dan Oaten Weddings">
     <meta name="twitter:description" content="Enquire about wedding videography and photography with Dan Oaten Weddings.">
     <meta name="twitter:image" content="https://danoatenweddings.com/PHOTOS%20FOR%20WEB/WEB%20COMPRESSED%20VERSIONS/woods.jpg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=18">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">DAN OATEN WEDDINGS</div>
+        <a href="index.html" class="logo">DAN OATEN WEDDINGS</a>
         <div class="nav-content">
             <button class="mobile-menu-button">☰</button>
             <div class="nav-links">
@@ -39,12 +39,12 @@
     </nav>
 
     <main class="contact-page">
-        <div class="contact-hero">
+        <div class="contact-hero scroll-reveal">
             <h1>Let's Create Something Beautiful Together</h1>
             <p>I'd love to hear about your wedding plans and discuss how I can help capture your special day.</p>
         </div>
 
-        <div class="contact-container">
+        <div class="contact-container scroll-reveal">
             <div class="contact-info-section">
                 <div class="contact-card">
             <h2>Get in Touch</h2>
@@ -128,7 +128,7 @@
             </div>
         </div>
 
-        <div class="faq-section">
+        <div class="faq-section scroll-reveal">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-grid">
                 <div class="faq-item">
@@ -147,16 +147,25 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="footer-content">
-            <div class="social-links">
-                <a href="https://instagram.com/danoatenweddings" target="_blank">Instagram</a>
-                <a href="https://www.youtube.com/channel/UCGWJz1EuunqIZIr-zbtcZ6g" target="_blank">YouTube</a>
+            <nav class="footer-nav" aria-label="Footer">
+                <a href="videography.html">Videography</a>
+                <a href="photography.html">Photography</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="reviews.html">Reviews</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://instagram.com/danoatenweddings" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.youtube.com/channel/UCGWJz1EuunqIZIr-zbtcZ6g" target="_blank" rel="noopener noreferrer">YouTube</a>
             </div>
-            <p>&copy; 2026 Dan Oaten Weddings. All rights reserved.</p>
+            <p class="footer-copy">&copy; 2026 Dan Oaten Weddings. All rights reserved.</p>
         </div>
     </footer>
 
+    <script defer data-domain="danoatenweddings.com" src="https://plausible.io/js/script.js"></script>
+    <script src="site.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 

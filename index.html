@@ -47,14 +47,14 @@
         ]
     }
     </script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=18">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.youtube-nocookie.com">
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">DAN OATEN WEDDINGS</div>
+        <a href="index.html" class="logo">DAN OATEN WEDDINGS</a>
         <div class="nav-content">
             <button class="mobile-menu-button">☰</button>
             <div class="nav-links">
@@ -98,14 +98,27 @@
                     <p class="hero-tagline">Capturing weddings across Suffolk, the UK and destinations worldwide</p>
                 </div>
                 <p class="hero-description">Based in Suffolk, Dan Oaten Weddings provides videography and photography for UK and destination weddings, from intimate ceremonies to grand events. My approach to filming your day is very relaxed and simple, I like to let the day unfold and capture those candid moments, and create something that is cinematic and unique to my couples.</p>
+                <div class="hero-cta-row scroll-reveal">
+                    <a href="contact.html" class="hero-cta-button">Check availability</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="video-banner-section">
+    <section class="reviews-teaser scroll-reveal" aria-label="Google reviews">
+        <div class="reviews-teaser-inner">
+            <div class="reviews-teaser-stars" aria-hidden="true">★★★★★</div>
+            <p class="reviews-teaser-score">5.0 · 17 Google reviews</p>
+            <p class="reviews-teaser-text">Trusted by couples across Suffolk and beyond</p>
+            <a href="reviews.html" class="reviews-teaser-link">Read reviews</a>
+        </div>
+    </section>
+
+    <a href="videography.html" class="banner-link-section video-banner-section scroll-reveal">
         <div class="banner-text-container">
             <h2 class="banner-title">VIDEOGRAPHY</h2>
             <p class="banner-description">Capturing your special moments in motion, creating timeless memories that tell your unique story.</p>
+            <span class="banner-section-cta">View videography</span>
         </div>
         <div class="banner-video-container">
             <div class="hero-youtube" aria-hidden="true">
@@ -124,99 +137,37 @@
                 >
             </div>
         </div>
-    </section>
+    </a>
 
-    <section class="photo-banner-section">
+    <a href="photography.html" class="banner-link-section photo-banner-section scroll-reveal">
         <div class="banner-text-container">
             <h2 class="banner-title">PHOTOGRAPHY</h2>
             <p class="banner-description">Capturing timeless moments through the lens, preserving your special memories in stunning detail.</p>
+            <span class="banner-section-cta">View photography</span>
         </div>
         <div class="banner-image-container">
-            <img src="PHOTOS FOR WEB/WEB COMPRESSED VERSIONS/woods.jpg" alt="Photography" class="banner-image">
+            <img src="PHOTOS FOR WEB/WEB THUMBS/woods.jpg" alt="Photography" class="banner-image" loading="lazy" decoding="async">
         </div>
-    </section>
+    </a>
 
-    <footer>
+    <footer class="site-footer">
         <div class="footer-content">
-            <p>&copy; 2026 Dan Oaten Weddings. All rights reserved.</p>
+            <nav class="footer-nav" aria-label="Footer">
+                <a href="videography.html">Videography</a>
+                <a href="photography.html">Photography</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="reviews.html">Reviews</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://instagram.com/danoatenweddings" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.youtube.com/channel/UCGWJz1EuunqIZIr-zbtcZ6g" target="_blank" rel="noopener noreferrer">YouTube</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 Dan Oaten Weddings. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Basic navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu
-        const mobileMenuButton = document.querySelector('.mobile-menu-button');
-        const navLinks = document.querySelector('.nav-links');
-        const navbar = document.querySelector('.navbar');
-
-        function setMobileMenuOpen(isOpen) {
-            if (!navLinks || !navbar) return;
-            navLinks.classList.toggle('active', isOpen);
-            navbar.classList.toggle('menu-open', isOpen);
-            document.body.style.overflow = isOpen ? 'hidden' : '';
-            if (mobileMenuButton) {
-                mobileMenuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-                mobileMenuButton.textContent = isOpen ? '✕' : '☰';
-            }
-        }
-
-        if (mobileMenuButton && navLinks) {
-            mobileMenuButton.setAttribute('aria-expanded', 'false');
-            mobileMenuButton.setAttribute('aria-label', 'Toggle navigation menu');
-
-            mobileMenuButton.addEventListener('click', (e) => {
-                e.stopPropagation();
-                setMobileMenuOpen(!navLinks.classList.contains('active'));
-            });
-
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    setMobileMenuOpen(false);
-                });
-            });
-        }
-
-        // Email submission
-        function sendEmail(event) {
-            event.preventDefault();
-            const email = document.getElementById('subscriberEmail').value;
-            const subject = 'New Website Subscriber';
-            const body = `A new subscriber has signed up with the email: ${email}`;
-            const mailtoLink = `mailto:danoatenmedia@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            window.location.href = mailtoLink;
-            document.getElementById('subscriberEmail').value = '';
-        }
-
-        // Top hero: self-hosted video on mobile only
-        (function initHeroMobileVideo() {
-            const isMobile = window.matchMedia('(max-width: 768px)').matches;
-            const heroIframe = document.querySelector('.hero .video-banner .hero-youtube-iframe');
-
-            if (isMobile && heroIframe) {
-                heroIframe.removeAttribute('src');
-            }
-
-            if (!isMobile) return;
-
-            const heroVideo = document.querySelector('.hero-banner-video--mobile');
-            if (!heroVideo) return;
-
-            const tryPlay = () => {
-                heroVideo.play().catch(() => {});
-            };
-
-            heroVideo.addEventListener('canplay', tryPlay, { once: true });
-            tryPlay();
-        })();
-    </script>
+    <script defer data-domain="danoatenweddings.com" src="https://plausible.io/js/script.js"></script>
+    <script src="site.js"></script>
 </body>
 </html> 
