@@ -125,6 +125,28 @@ h1, h2, h3 {
     color: #C4A484;
 }
 
+/* Large desktop — bigger nav type while keeping flex layout (no overlap) */
+@media (min-width: 1401px) {
+    .navbar {
+        padding: 1.35rem 2rem;
+        gap: 1.5rem;
+    }
+
+    .logo {
+        font-size: 0.8rem;
+        letter-spacing: 0.52em;
+    }
+
+    .nav-links {
+        gap: 1.75rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+        letter-spacing: 0.45em;
+    }
+}
+
 /* Hero Section */
 .hero {
     position: relative;
