@@ -3686,5 +3686,197 @@ a.logo:hover {
     .footer-nav {
         gap: 0.85rem 1.25rem;
     }
+
+    .about-header-text .about-page-title {
+        font-size: clamp(0.62rem, 2.85vw, 0.82rem);
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+    }
+
+    .about-how-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* About page — enhanced sections */
+.about-header-text {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    padding: 0 1rem;
+}
+
+.about-page-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.about-page-subtitle {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: #999;
+    font-weight: 100;
+    margin: 0 0 2rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.about-spread-text .about-text-container .about-role-line {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 100;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #C4A484;
+    margin: 0 0 1.75rem;
+}
+
+.about-section-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin: 0 0 2rem;
+}
+
+.about-how-i-work {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.about-how-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 2rem;
+}
+
+.about-how-list li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #aaa;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.about-how-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #C4A484;
+}
+
+.about-showreel {
+    max-width: 960px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.about-video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.about-video-container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.about-review-snippet {
+    max-width: 720px;
+    margin: 4rem auto;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 1px solid rgba(196, 164, 132, 0.2);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.about-review-stars {
+    color: #C4A484;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+}
+
+.about-review-score {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #888;
+    margin: 0 0 1.25rem;
+}
+
+.about-review-quote {
+    margin: 0 0 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #ccc;
+    font-style: italic;
+}
+
+.about-review-author {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #C4A484;
+    margin-bottom: 1.25rem;
+}
+
+.about-review-link {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #C4A484;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196, 164, 132, 0.4);
+    padding-bottom: 0.15rem;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.about-review-link:hover {
+    color: #e0c9a8;
+    border-color: #e0c9a8;
+}
+
+.about-cta {
+    text-align: center;
+    margin: 4rem auto 5rem;
+    padding: 0 1.5rem;
+}
+
+.about-cta-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #999;
+    margin: 0 0 1.25rem;
 }
  
