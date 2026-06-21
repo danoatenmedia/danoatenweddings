@@ -17,7 +17,7 @@
     <meta name="twitter:description" content="Wedding photography by Dan Oaten in Suffolk. Natural, candid images from intimate ceremonies to destination celebrations.">
     <meta name="twitter:image" content="https://danoatenweddings.com/PHOTOS%20FOR%20WEB/WEB%20COMPRESSED%20VERSIONS/2-446.jpg">
     <link rel="preload" as="image" href="PHOTOS FOR WEB/WEB THUMBS/2-446.jpg">
-    <link rel="stylesheet" href="styles.css?v=13">
+    <link rel="stylesheet" href="styles.css?v=14">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -256,7 +256,7 @@
             }
         };
 
-        // Scroll reveal — fade up as sections enter the viewport
+        // Scroll reveal — fade up when sections enter the viewport (works scrolling up or down)
         (function initScrollReveal() {
             const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-stagger');
             if (!revealElements.length) return;
@@ -269,10 +269,7 @@
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
-                    }
+                    entry.target.classList.toggle('is-visible', entry.isIntersecting);
                 });
             }, {
                 threshold: 0.15,
