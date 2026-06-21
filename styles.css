@@ -3457,20 +3457,19 @@ a.logo:hover {
     border-color: #e0c9a8;
 }
 
-/* Clickable homepage banner sections */
-.banner-link-section {
+/* Clickable homepage banner sections — no hover effects on media */
+.banner-clickable {
     position: relative;
-    display: block;
+}
+
+.banner-stretch-link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
     text-decoration: none;
-    color: inherit;
-    transition: opacity 0.3s ease;
 }
 
-.banner-link-section:hover {
-    opacity: 0.97;
-}
-
-.banner-link-section .banner-section-cta {
+.banner-clickable .banner-section-cta {
     display: inline-block;
     margin-top: 1.25rem;
     font-family: 'Space Grotesk', sans-serif;
@@ -3480,26 +3479,18 @@ a.logo:hover {
     color: #C4A484;
     border-bottom: 1px solid rgba(196, 164, 132, 0.4);
     padding-bottom: 0.15rem;
-    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-.banner-link-section:hover .banner-section-cta {
-    color: #e0c9a8;
-    border-color: #e0c9a8;
+.banner-clickable .banner-text-container {
+    position: relative;
+    z-index: 3;
+    pointer-events: none;
 }
 
-.banner-link-section .banner-image,
-.banner-link-section .banner-video-container {
-    transition: transform 0.5s ease;
-}
-
-.banner-link-section:hover .banner-image {
-    transform: scale(1.03);
-}
-
-.banner-link-section:hover .banner-video-container .hero-youtube-iframe,
-.banner-link-section:hover .banner-video-container .hero-youtube-poster {
-    transform: scale(1.03);
+.banner-clickable .banner-video-container,
+.banner-clickable .banner-image-container {
+    position: relative;
+    z-index: 1;
 }
 
 /* Site footer */
