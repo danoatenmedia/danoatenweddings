@@ -2331,15 +2331,16 @@ footer {
     padding: 0 clamp(1rem, 2.5vw, 2.5rem);
 }
 
-/* About page: text | photo (centre) | suppliers */
+/* About page: text | photo (centre) */
 .about-spread-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(300px, 520px) minmax(0, 1.1fr);
-    gap: clamp(4.5rem, 9vw, 8rem);
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 520px);
+    gap: clamp(3rem, 6vw, 5rem);
     align-items: center;
     margin: clamp(3rem, 6vh, 5rem) auto;
     width: 100%;
-    min-height: min(72vh, 820px);
+    max-width: 1100px;
+    min-height: unset;
 }
 
 .about-spread-text .about-text-container {
@@ -2478,44 +2479,10 @@ footer {
     font-size: 1.5rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
     .about-spread-layout {
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "text text"
-            "photo suppliers";
-        gap: 3.5rem 4.5rem;
-        align-items: start;
-    }
-
-    .about-spread-text {
-        grid-area: text;
-    }
-
-    .about-spread-photo {
-        grid-area: photo;
-        justify-content: center;
-    }
-
-    .about-spread-suppliers {
-        grid-area: suppliers;
-    }
-
-    .about-spread-photo .about-portrait {
-        max-width: 100%;
-        max-height: 560px;
-    }
-}
-
-@media (max-width: 768px) {
-    .about-spread-layout {
-        min-height: unset;
         grid-template-columns: 1fr;
-        grid-template-areas:
-            "text"
-            "photo"
-            "suppliers";
-        gap: 3.75rem;
+        gap: 3rem;
     }
 
     .about-spread-text .about-text-container {
@@ -2526,21 +2493,11 @@ footer {
         max-width: min(100%, 400px);
         margin: 0 auto;
     }
+}
 
-    .about-spread-suppliers {
-        text-align: center;
-        padding-top: 1rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .about-spread-suppliers .recommended-title,
-    .about-spread-suppliers .recommended-subtitle {
-        text-align: center;
-    }
-
-    .about-spread-suppliers .recommended-grid {
-        max-width: 420px;
-        margin: 0 auto;
+@media (max-width: 768px) {
+    .about-spread-layout {
+        gap: 2.5rem;
     }
 }
 
@@ -3878,5 +3835,300 @@ a.logo:hover {
     text-transform: uppercase;
     color: #999;
     margin: 0 0 1.25rem;
+}
+
+/* About page — full-width venue grid */
+.about-venues {
+    max-width: 960px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.about-venues-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #888;
+    text-align: center;
+    margin: -1rem 0 2.5rem;
+    line-height: 1.7;
+}
+
+.about-venues-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.about-venue-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(196, 164, 132, 0.15);
+    border-radius: 12px;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.about-venue-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(196, 164, 132, 0.45);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.about-venue-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 0.35rem 0.65rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-venue-instagram {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.about-venue-instagram i {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-venue-instagram:hover {
+    transform: scale(1.08);
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.about-venue-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.75rem 1.5rem 1.75rem;
+    text-decoration: none;
+    text-align: center;
+    height: 100%;
+}
+
+.about-venue-logo-stage {
+    width: 100%;
+    max-width: 220px;
+    height: 110px;
+    background: #f5f0ea;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.about-venue-logo-stage--dark {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-venue-logo-stage .venue-logo {
+    max-height: 80px;
+    max-width: 180px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.about-venue-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #C4A484;
+    margin: 0 0 0.35rem;
+    letter-spacing: 0.06em;
+}
+
+.about-venue-location {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    color: #777;
+    margin: 0 0 1rem;
+}
+
+.about-venue-cta {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #999;
+    border-bottom: 1px solid rgba(196, 164, 132, 0.35);
+    padding-bottom: 0.1rem;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.about-venue-card:hover .about-venue-cta {
+    color: #C4A484;
+    border-color: #C4A484;
+}
+
+/* Homepage venue trust strip */
+.venue-trust-strip {
+    background: rgba(196, 164, 132, 0.08);
+    border-top: 1px solid rgba(196, 164, 132, 0.12);
+    border-bottom: 1px solid rgba(196, 164, 132, 0.12);
+    padding: 1.25rem 2rem;
+    text-align: center;
+}
+
+.venue-trust-strip p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #aaa;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.venue-trust-strip a {
+    color: #C4A484;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196, 164, 132, 0.35);
+    transition: color 0.3s ease;
+}
+
+.venue-trust-strip a:hover {
+    color: #e0c9a8;
+}
+
+/* Instagram strip */
+.instagram-strip {
+    max-width: 900px;
+    margin: 3rem auto 4rem;
+    padding: 0 1.5rem;
+}
+
+.instagram-strip-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.75rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(196, 164, 132, 0.2);
+    border-radius: 12px;
+}
+
+.instagram-strip-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.instagram-strip-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.instagram-strip-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 0.35rem;
+    font-weight: 400;
+}
+
+.instagram-strip-text p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.instagram-strip-link {
+    flex-shrink: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #C4A484;
+    text-decoration: none;
+    padding: 0.65rem 1.1rem;
+    border: 1px solid rgba(196, 164, 132, 0.35);
+    border-radius: 50px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.instagram-strip-link:hover {
+    background: rgba(196, 164, 132, 0.15);
+    color: #e0c9a8;
+}
+
+/* Contact enquiry tips */
+.contact-enquiry-tips {
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    padding: 1.25rem 1.5rem;
+    background: rgba(196, 164, 132, 0.08);
+    border: 1px solid rgba(196, 164, 132, 0.15);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-enquiry-tips p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #aaa;
+    margin: 0;
+}
+
+.contact-enquiry-tips p + p {
+    margin-top: 0.5rem;
+}
+
+.contact-enquiry-tips strong {
+    color: #C4A484;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .about-venues-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .instagram-strip-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .venue-trust-strip p {
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+    }
 }
  
