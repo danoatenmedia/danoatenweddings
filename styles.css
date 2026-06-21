@@ -49,11 +49,12 @@ h1, h2, h3 {
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 1.5rem 0;
+    padding: 1.1rem 1.5rem;
     margin: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .navbar.scrolled {
@@ -62,15 +63,19 @@ h1, h2, h3 {
 
 .logo {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     font-weight: 100;
-    letter-spacing: 0.6em;
+    letter-spacing: 0.42em;
     color: #C4A484;
     text-transform: uppercase;
     margin: 0;
-    padding: 0 2rem;
-    position: absolute;
-    left: 2rem;
+    padding: 0;
+    position: relative;
+    left: auto;
+    flex: 0 1 auto;
+    min-width: 0;
+    line-height: 1.3;
+    white-space: nowrap;
 }
 
 .camera-logo {
@@ -87,28 +92,33 @@ h1, h2, h3 {
 .nav-content {
     display: flex;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0;
     position: relative;
-    margin-right: 25%;
+    margin-right: 0;
+    flex: 0 1 auto;
+    min-width: 0;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.15rem;
     margin: 0;
     padding: 0;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
 }
 
 .nav-links a {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     font-weight: 100;
-    letter-spacing: 0.6em;
+    letter-spacing: 0.3em;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.3s ease;
     padding: 0.5rem 0;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
@@ -991,45 +1001,8 @@ footer {
     -webkit-tap-highlight-color: transparent;
 }
 
-/* Laptop / MacBook — prevent logo and nav overlap (desktop styling unchanged above 1400px) */
+/* Laptop / MacBook — hero tweaks (navbar flex layout applies to all desktop) */
 @media (max-width: 1400px) and (min-width: 993px) {
-    .navbar {
-        justify-content: space-between;
-        padding: 1.1rem 1.5rem;
-        gap: 1rem;
-    }
-
-    .logo {
-        position: relative;
-        left: auto;
-        padding: 0;
-        flex: 0 1 auto;
-        min-width: 0;
-        line-height: 1.3;
-        white-space: nowrap;
-        font-size: 0.72rem;
-        letter-spacing: 0.42em;
-    }
-
-    .nav-content {
-        margin-right: 0;
-        padding: 0;
-        flex: 0 1 auto;
-        min-width: 0;
-    }
-
-    .nav-links {
-        gap: 1.15rem;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-    }
-
-    .nav-links a {
-        font-size: 0.72rem;
-        letter-spacing: 0.3em;
-        white-space: nowrap;
-    }
-
     .hero-title {
         font-size: 2rem;
         letter-spacing: 0.12em;
