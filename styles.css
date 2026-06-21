@@ -3638,21 +3638,6 @@ a.logo:hover {
     padding: 0 2rem;
 }
 
-/* Photography — gallery hover + lightbox cursor */
-.wedding-images img,
-.other-occasions-images img {
-    cursor: zoom-in;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.wedding-images img:hover,
-.other-occasions-images img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    z-index: 1;
-    position: relative;
-}
-
 /* Scroll reveal — site-wide */
 @media (prefers-reduced-motion: no-preference) {
     .scroll-reveal {

@@ -1,8 +1,6 @@
 (function () {
     'use strict';
 
-    const FULL_PATH = 'PHOTOS FOR WEB/WEB COMPRESSED VERSIONS/';
-
     function initNavbarScroll() {
         const navbar = document.querySelector('.navbar');
         if (!navbar) return;
@@ -96,47 +94,6 @@
         document.body.appendChild(link);
     }
 
-    function initPhotographyLightbox() {
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const closeLightbox = document.querySelector('.close-lightbox');
-        if (!lightbox || !lightboxImg) return;
-
-        const galleryImages = document.querySelectorAll('.wedding-images img, .other-occasions-images img');
-
-        galleryImages.forEach((img) => {
-            img.classList.add('gallery-image');
-
-            if (!img.dataset.full) {
-                const filename = decodeURIComponent(img.src.split('/').pop().split('?')[0]);
-                img.dataset.full = FULL_PATH + filename;
-            }
-
-            img.addEventListener('click', () => {
-                lightboxImg.src = img.dataset.full;
-                lightboxImg.alt = img.alt || 'Full size image';
-                lightbox.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        function close() {
-            lightbox.style.display = 'none';
-            document.body.style.overflow = '';
-            lightboxImg.src = '';
-        }
-
-        if (closeLightbox) closeLightbox.onclick = close;
-
-        lightbox.onclick = (e) => {
-            if (e.target === lightbox) close();
-        };
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && lightbox.style.display === 'flex') close();
-        });
-    }
-
     function initHeroMobileVideo() {
         const isMobile = window.matchMedia('(max-width: 768px)').matches;
         const heroIframe = document.querySelector('.hero .video-banner .hero-youtube-iframe');
@@ -164,7 +121,6 @@
         initActiveNav();
         initScrollReveal();
         initStickyEnquire();
-        initPhotographyLightbox();
         initHeroMobileVideo();
     });
 })();
