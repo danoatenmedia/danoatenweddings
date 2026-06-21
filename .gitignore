@@ -18,6 +18,8 @@ venue-photos/
 PHOTOS FOR WEB/*
 !PHOTOS FOR WEB/WEB COMPRESSED VERSIONS/
 !PHOTOS FOR WEB/WEB COMPRESSED VERSIONS/**
+!PHOTOS FOR WEB/WEB THUMBS/
+!PHOTOS FOR WEB/WEB THUMBS/**
 
 # Loose originals at project root only (leading / = root only)
 /[12]-*.jpg
