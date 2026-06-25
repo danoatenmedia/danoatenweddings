@@ -65,7 +65,14 @@
         const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-stagger');
         if (!revealElements.length) return;
 
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const isReviewsMobile =
+            document.querySelector('.reviews-page') &&
+            window.matchMedia('(max-width: 992px)').matches;
+
+        if (
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+            isReviewsMobile
+        ) {
             revealElements.forEach((el) => el.classList.add('is-visible'));
             return;
         }

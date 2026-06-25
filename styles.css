@@ -3634,6 +3634,21 @@ a.logo:hover {
     .scroll-reveal-stagger.is-visible > *:nth-child(n+13) { transition-delay: 0.65s; }
 }
 
+/* Reviews page: show all content immediately on mobile */
+@media (max-width: 992px) {
+    .reviews-page .scroll-reveal,
+    .reviews-page .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: none;
+    }
+
+    .reviews-page .scroll-reveal-stagger > * {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-cta-button {
         font-size: 0.75rem;
